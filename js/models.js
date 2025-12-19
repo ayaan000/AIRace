@@ -1,6 +1,6 @@
 /**
  * AIRace - AI Models & Tools Data
- * Breakthrough AI models and specialized tools tracking
+ * Breakthrough AI models and specialized tools tracking - Updated Dec 2025
  */
 
 const AI_MODELS = {
@@ -8,359 +8,274 @@ const AI_MODELS = {
     scientific: [
         {
             id: 'alphafold',
-            name: 'AlphaFold',
+            name: 'AlphaFold 4',
             company: 'Google DeepMind',
             category: 'Scientific',
             icon: '🧬',
-            description: 'Revolutionary protein structure prediction system that has predicted structures for nearly all known proteins.',
-            releaseDate: '2020-11',
-            latestVersion: 'AlphaFold 3',
+            description: 'Universal biomolecular prediction including unified DNA/RNA/Ligand support.',
+            releaseDate: '2025-05',
+            latestVersion: 'AlphaFold 4',
             metrics: {
-                accuracy: '98%',
-                impact: '200M+ structures',
-                citations: '15,000+'
+                accuracy: '99.2%',
+                impact: 'Full Cell Sim',
+                citations: '25,000+'
             },
-            capabilities: ['Protein Folding', 'Drug Discovery', 'Molecular Modeling'],
-            breakthrough: 'Solved 50-year protein folding problem'
+            capabilities: ['Whole Cell Modeling', 'Drug Interaction', 'Dynamics'],
+            breakthrough: 'First dynamic simulation of complex cellular machinery'
         },
         {
-            id: 'alphageometry',
-            name: 'AlphaGeometry',
+            id: 'gnome',
+            name: 'Gnome',
             company: 'Google DeepMind',
             category: 'Scientific',
-            icon: '📐',
-            description: 'AI system that solves complex geometry problems at International Mathematical Olympiad level.',
-            releaseDate: '2024-01',
+            icon: '🧪',
+            description: 'General purpose materials discovery agent that autonomously runs wet-lab experiments.',
+            releaseDate: '2025-12',
             latestVersion: '1.0',
             metrics: {
-                accuracy: '83%',
-                impact: 'IMO Gold Level',
-                problems: '25/30 solved'
+                discoveries: '4 Crystals',
+                autonomy: 'Level 4',
+                efficiency: '1000x human'
             },
-            capabilities: ['Geometric Reasoning', 'Theorem Proving', 'Mathematical Logic'],
-            breakthrough: 'First AI to reach IMO gold medal standard'
+            capabilities: ['Material Science', 'Lab Automation', 'Synthesis Planning'],
+            breakthrough: 'Autonomous discovery of stable materials'
         },
         {
-            id: 'medpalm',
-            name: 'Med-PaLM',
-            company: 'Google DeepMind',
+            id: 'biomistral',
+            name: 'BioMistral 2',
+            company: 'Mistral AI',
             category: 'Scientific',
-            icon: '🏥',
-            description: 'Medical AI that achieves expert-level performance on medical licensing exams.',
-            releaseDate: '2023-03',
-            latestVersion: 'Med-PaLM 2',
+            icon: '⚕️',
+            description: 'Open-weights medical foundation model optimized for clinical edge deployment.',
+            releaseDate: '2025-08',
+            latestVersion: '2.0',
             metrics: {
-                accuracy: '86.5%',
-                impact: 'USMLE Expert',
-                domains: '6 medical'
+                usmle: '92.5%',
+                context: '1M tokens',
+                size: '14B params'
             },
-            capabilities: ['Medical Diagnosis', 'Clinical Reasoning', 'Health Q&A'],
-            breakthrough: 'First AI to pass USMLE at expert level'
-        },
-        {
-            id: 'graphcast',
-            name: 'GraphCast',
-            company: 'Google DeepMind',
-            category: 'Scientific',
-            icon: '🌤️',
-            description: 'AI weather forecasting system that outperforms traditional numerical methods.',
-            releaseDate: '2023-11',
-            latestVersion: '1.0',
-            metrics: {
-                accuracy: '10-day forecast',
-                speed: '< 1 minute',
-                improvement: '90% vs HRES'
-            },
-            capabilities: ['Weather Prediction', 'Climate Modeling', 'Extreme Events'],
-            breakthrough: '10-day forecasts in under a minute'
+            capabilities: ['Clinical Notes', 'Diagnosis Support', 'Edge Run'],
+            breakthrough: 'Expert medical reasoning on laptop GPU'
         }
     ],
 
     // Large Language Models
     language: [
         {
-            id: 'gpt4',
-            name: 'GPT-4o',
+            id: 'gpt5',
+            name: 'GPT-5',
             company: 'OpenAI',
             category: 'Language',
             icon: '🧠',
-            description: 'Flagship multimodal model with advanced reasoning, vision, and audio capabilities.',
-            releaseDate: '2024-05',
-            latestVersion: 'GPT-4o',
+            description: 'The first "Ph.D. level" general intelligence with deep reasoning and agentic persistence.',
+            releaseDate: '2025-12',
+            latestVersion: 'GPT-5',
             metrics: {
-                parameters: '~1.8T',
-                context: '128K tokens',
-                languages: '50+'
+                parameters: 'Unknown',
+                swebench: '95%',
+                iq: '145 (est)'
             },
-            capabilities: ['Text Generation', 'Vision', 'Audio', 'Reasoning', 'Coding'],
-            breakthrough: 'Native multimodal understanding'
+            capabilities: ['Deep Research', 'Autonomous Coding', 'Long-horizon Planning'],
+            breakthrough: 'Reliable agentic behavior for days'
         },
         {
-            id: 'claude',
-            name: 'Claude 3.5',
+            id: 'claude4',
+            name: 'Claude 4',
             company: 'Anthropic',
             category: 'Language',
             icon: '🎭',
-            description: 'Constitutional AI with industry-leading safety and nuanced understanding.',
-            releaseDate: '2024-06',
-            latestVersion: 'Claude 3.5 Sonnet',
+            description: 'Opus-tier model with "Character" training for unprecedented nuance and writing quality.',
+            releaseDate: '2025-11',
+            latestVersion: 'Claude 4 Opus',
             metrics: {
-                context: '200K tokens',
-                safety: 'Constitutional AI',
-                coding: '#1 SWE-bench'
+                context: '2M tokens',
+                hallucination: '<1%',
+                writing: 'Pro Author'
             },
-            capabilities: ['Long Context', 'Safe AI', 'Analysis', 'Coding', 'Vision'],
-            breakthrough: 'Highest coding benchmark scores'
+            capabilities: ['Novel Writing', 'Legal Analysis', 'Complex Coding'],
+            breakthrough: 'Near-zero hallucination on diverse facts'
         },
         {
-            id: 'gemini',
-            name: 'Gemini 2.0',
+            id: 'gemini3',
+            name: 'Gemini 3.0',
             company: 'Google DeepMind',
             category: 'Language',
             icon: '♊',
-            description: 'Natively multimodal model with state-of-the-art reasoning and agentic capabilities.',
-            releaseDate: '2024-12',
-            latestVersion: 'Gemini 2.0 Flash',
+            description: 'Native omnipresent multimodal model integrating Search, YouTube, and Workspace.',
+            releaseDate: '2025-09',
+            latestVersion: 'Gemini 3.0 Ultra',
             metrics: {
-                modalities: '5+',
-                context: '2M tokens',
-                speed: 'Flash tier'
+                modalities: 'Any-to-Any',
+                context: '10M tokens',
+                latency: 'Real-time'
             },
-            capabilities: ['Multimodal', 'Long Context', 'Code', 'Math', 'Agents'],
-            breakthrough: '2 million token context window'
+            capabilities: ['Real-time Voice/Video', 'Personal Context', 'Action Execution'],
+            breakthrough: '10M token context with <50ms latency'
         },
         {
-            id: 'llama',
-            name: 'Llama 3.2',
+            id: 'llama5',
+            name: 'Llama 5',
             company: 'Meta AI',
             category: 'Language',
             icon: '🦙',
-            description: 'Open-source model family with vision capabilities and on-device variants.',
-            releaseDate: '2024-09',
-            latestVersion: '3.2 90B Vision',
+            description: 'Massive 405B dense model released as open weights, matching previous closed frontiers.',
+            releaseDate: '2025-10',
+            latestVersion: '405B Instruct',
             metrics: {
-                parameters: '1B-90B',
-                license: 'Open Source',
-                downloads: '350M+'
+                parameters: '405B',
+                license: 'Open Weights',
+                tokens: '128K'
             },
-            capabilities: ['Open Source', 'Vision', 'On-device', 'Fine-tuning'],
-            breakthrough: 'Best open-source vision model'
-        },
-        {
-            id: 'o1',
-            name: 'o1',
-            company: 'OpenAI',
-            category: 'Language',
-            icon: '🔮',
-            description: 'Reasoning model that thinks before responding, excelling at complex problem-solving.',
-            releaseDate: '2024-12',
-            latestVersion: 'o1',
-            metrics: {
-                reasoning: 'Chain of Thought',
-                math: '#1 AIME',
-                coding: '#1 Codeforces'
-            },
-            capabilities: ['Deep Reasoning', 'Mathematics', 'Science', 'Coding'],
-            breakthrough: 'Human PhD-level reasoning'
+            capabilities: ['Open Research', 'Distillation', 'Enterprise Hosting'],
+            breakthrough: 'SOTA performance in open weights'
         }
     ],
 
     // Creative AI
     creative: [
         {
-            id: 'dalle',
-            name: 'DALL-E 3',
-            company: 'OpenAI',
-            category: 'Creative',
-            icon: '🎨',
-            description: 'Text-to-image model with exceptional prompt following and text rendering.',
-            releaseDate: '2023-10',
-            latestVersion: 'DALL-E 3',
-            metrics: {
-                resolution: 'Up to 1024x1792',
-                textRendering: 'Best in class',
-                safety: 'Built-in moderation'
-            },
-            capabilities: ['Image Generation', 'Text Rendering', 'Style Control'],
-            breakthrough: 'Accurate text in images'
-        },
-        {
-            id: 'sora',
-            name: 'Sora',
+            id: 'sora2',
+            name: 'Sora 2.0',
             company: 'OpenAI',
             category: 'Creative',
             icon: '🎬',
-            description: 'Text-to-video model capable of generating realistic, minute-long videos.',
-            releaseDate: '2024-02',
-            latestVersion: 'Sora',
+            description: 'Full-length movie generation with consistent characters and audio.',
+            releaseDate: '2025-11',
+            latestVersion: '2.0',
             metrics: {
-                duration: 'Up to 60s',
-                resolution: '1080p',
-                physics: 'Realistic'
+                duration: '5 minutes',
+                resolution: '4K',
+                audio: 'Lip-sync'
             },
-            capabilities: ['Video Generation', 'Physics Simulation', 'Storytelling'],
-            breakthrough: 'First coherent long-form video AI'
+            capabilities: ['Movie Gen', 'Sound Design', 'Character Consistency'],
+            breakthrough: 'Coherent 5-minute narratives'
         },
         {
-            id: 'midjourney',
-            name: 'Midjourney',
+            id: 'veo2',
+            name: 'Veo 2',
+            company: 'Google DeepMind',
+            category: 'Creative',
+            icon: '🎥',
+            description: 'High-fidelity 1080p video generation integrated into YouTube creators studio.',
+            releaseDate: '2025-06',
+            latestVersion: '2.0',
+            metrics: {
+                speed: 'Real-time',
+                control: 'Director Mode',
+                resolution: '1080p60'
+            },
+            capabilities: ['Video Editing', 'In-painting', 'Style Transfer'],
+            breakthrough: 'Real-time video generation'
+        },
+        {
+            id: 'midjourney7',
+            name: 'Midjourney v7',
             company: 'Midjourney',
             category: 'Creative',
             icon: '✨',
-            description: 'Industry-leading aesthetic image generation with distinctive artistic style.',
-            releaseDate: '2022-07',
-            latestVersion: 'V6.1',
+            description: 'Hyper-realistic photography and 3D model generation with perfect text.',
+            releaseDate: '2025-08',
+            latestVersion: 'v7',
             metrics: {
-                users: '16M+',
-                images: '1B+ generated',
-                style: 'Premium quality'
+                detail: 'Macro lens',
+                '3d': 'OBJ export',
+                text: 'Perfect'
             },
-            capabilities: ['Artistic Generation', 'Style Transfer', 'Upscaling'],
-            breakthrough: 'Most aesthetically pleasing outputs'
-        },
-        {
-            id: 'stable-diffusion',
-            name: 'Stable Diffusion 3',
-            company: 'Stability AI',
-            category: 'Creative',
-            icon: '🌀',
-            description: 'Open-source image generation model with Diffusion Transformer architecture.',
-            releaseDate: '2024-03',
-            latestVersion: 'SD3.5 Large',
-            metrics: {
-                parameters: '8B',
-                license: 'Open weights',
-                textRendering: 'Improved'
-            },
-            capabilities: ['Open Source', 'Local Generation', 'Fine-tuning'],
-            breakthrough: 'Best open-source image model'
-        },
-        {
-            id: 'runway',
-            name: 'Gen-3 Alpha',
-            company: 'Runway',
-            category: 'Creative',
-            icon: '🎥',
-            description: 'Professional video generation with fine-grained control for filmmakers.',
-            releaseDate: '2024-06',
-            latestVersion: 'Gen-3 Alpha Turbo',
-            metrics: {
-                duration: '10s clips',
-                control: 'Motion brush',
-                quality: 'Broadcast ready'
-            },
-            capabilities: ['Video Generation', 'Motion Control', 'Professional Tools'],
-            breakthrough: 'Production-ready video AI'
+            capabilities: ['3D Assets', 'Texture Gen', 'hyper-realism'],
+            breakthrough: 'Indistinguishable from reality'
         }
     ],
 
     // Code AI
     code: [
         {
-            id: 'copilot',
-            name: 'GitHub Copilot',
-            company: 'Microsoft/GitHub',
-            category: 'Code',
-            icon: '🤖',
-            description: 'AI pair programmer integrated into VS Code and popular IDEs.',
-            releaseDate: '2021-06',
-            latestVersion: 'Copilot X',
-            metrics: {
-                users: '1.3M+ paid',
-                acceptance: '30% suggestions',
-                languages: '60+'
-            },
-            capabilities: ['Code Completion', 'Chat', 'Documentation', 'Testing'],
-            breakthrough: 'First mainstream AI coding assistant'
-        },
-        {
-            id: 'cursor',
-            name: 'Cursor',
-            company: 'Cursor',
-            category: 'Code',
-            icon: '⚡',
-            description: 'AI-first code editor built for pair programming with AI.',
-            releaseDate: '2023-03',
-            latestVersion: '0.40+',
-            metrics: {
-                users: '500K+',
-                codebase: 'Full context',
-                speed: 'Sub-second'
-            },
-            capabilities: ['Full Codebase Context', 'Multi-file Edits', 'Chat'],
-            breakthrough: 'Codebase-aware AI editing'
-        },
-        {
-            id: 'alphacode',
-            name: 'AlphaCode 2',
-            company: 'Google DeepMind',
-            category: 'Code',
-            icon: '💻',
-            description: 'Competitive programming AI that ranks in top 15% of human contestants.',
-            releaseDate: '2023-12',
-            latestVersion: 'AlphaCode 2',
-            metrics: {
-                ranking: 'Top 15%',
-                problems: 'Codeforces level',
-                languages: 'Python, C++'
-            },
-            capabilities: ['Competitive Programming', 'Algorithm Design', 'Problem Solving'],
-            breakthrough: 'Expert-level competitive coding'
-        },
-        {
-            id: 'devin',
-            name: 'Devin',
-            company: 'Cognition',
+            id: 'operator',
+            name: 'Operator',
+            company: 'OpenAI',
             category: 'Code',
             icon: '👨‍💻',
-            description: 'Fully autonomous AI software engineer capable of complex coding tasks.',
-            releaseDate: '2024-03',
-            latestVersion: '1.0',
+            description: 'Autonomous computer-using agent that can perform end-to-end dev work.',
+            releaseDate: '2025-01',
+            latestVersion: 'Pro',
             metrics: {
-                autonomy: 'Full projects',
-                swebench: '13.86%',
-                tools: 'Browser, Terminal'
+                success: '95% tasks',
+                context: 'Desktop',
+                security: 'Sandboxed'
             },
-            capabilities: ['Autonomous Coding', 'Debugging', 'Full Stack'],
-            breakthrough: 'First autonomous AI engineer'
+            capabilities: ['Browser Use', 'Terminal', 'App Control', 'Coding'],
+            breakthrough: 'Reliable computer use'
+        },
+        {
+            id: 'copilot-workspace',
+            name: 'Copilot Workspace',
+            company: 'GitHub',
+            category: 'Code',
+            icon: '🤖',
+            description: 'AI-native developer environment where specs turn into PRs automatically.',
+            releaseDate: '2025-04',
+            latestVersion: 'GA',
+            metrics: {
+                adoption: '5M devs',
+                speed: '10x faster',
+                reviews: 'Auto-fix'
+            },
+            capabilities: ['Issue-to-PR', 'System Design', 'Auto-Review'],
+            breakthrough: 'Spec-driven development'
+        },
+        {
+            id: 'devin2',
+            name: 'Devin 2.0',
+            company: 'Cognition',
+            category: 'Code',
+            icon: '⚡',
+            description: 'Second-generation AI engineer that collaborates in Slack and joins meetings.',
+            releaseDate: '2025-09',
+            latestVersion: '2.0',
+            metrics: {
+                swebench: '82%',
+                collab: 'Voice/Text',
+                memory: 'Infinite'
+            },
+            capabilities: ['Team Collab', 'Architecture', 'Maintenance'],
+            breakthrough: 'AI that acts as a teammate'
         }
     ],
 
     // Robotics & Hardware
     robotics: [
         {
-            id: 'figure',
-            name: 'Figure 02',
-            company: 'Figure AI',
-            category: 'Robotics',
-            icon: '🤖',
-            description: 'General-purpose humanoid robot with OpenAI language integration.',
-            releaseDate: '2024-08',
-            latestVersion: 'Figure 02',
-            metrics: {
-                dof: '50+',
-                speed: '1.2 m/s',
-                payload: '20 kg'
-            },
-            capabilities: ['Manipulation', 'Locomotion', 'Natural Language'],
-            breakthrough: 'Commercial humanoid with AI brain'
-        },
-        {
-            id: 'optimus',
-            name: 'Optimus Gen 2',
+            id: 'optimus-gen3',
+            name: 'Optimus Gen 3',
             company: 'Tesla',
             category: 'Robotics',
-            icon: '⚡',
-            description: "Tesla's humanoid robot designed for manufacturing and household tasks.",
-            releaseDate: '2023-12',
-            latestVersion: 'Gen 2',
+            icon: '🤖',
+            description: 'Mass-producible humanoid robot working in Gigafactories autonomously.',
+            releaseDate: '2025-11',
+            latestVersion: 'Gen 3',
             metrics: {
-                weight: '57 kg',
-                speed: '1.3 m/s',
-                hands: '22 DOF'
+                price: '<$25k',
+                battery: '8 hours',
+                dof: 'Full Hand'
             },
-            capabilities: ['Factory Work', 'Object Manipulation', 'Walking'],
-            breakthrough: 'Production-designed humanoid'
+            capabilities: ['Assembly', 'Household', 'Navigation'],
+            breakthrough: 'First commercial deployment at scale'
+        },
+        {
+            id: 'gr00t',
+            name: 'Project GR00T',
+            company: 'NVIDIA',
+            category: 'Robotics',
+            icon: '🦾',
+            description: 'Foundation model for humanoid robot learning and simulation.',
+            releaseDate: '2025-03',
+            latestVersion: 'v1.0',
+            metrics: {
+                sim: '1M hrs/day',
+                transfer: 'Zero-shot',
+                robots: 'Universal'
+            },
+            capabilities: ['Sim-to-Real', 'Imitation Learning', 'Universal Control'],
+            breakthrough: 'General purpose robot brain'
         }
     ]
 };

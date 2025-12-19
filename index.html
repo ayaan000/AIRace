@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AIRace - Track leading AI companies, their progress toward AGI, breakthrough models, market intelligence, and industry news.">
-  <meta name="keywords" content="AI, AGI, artificial intelligence, OpenAI, Anthropic, DeepMind, GPT, Claude, Gemini, AlphaFold">
+  <meta name="description"
+    content="AIRace - Track leading AI companies, their progress toward AGI, breakthrough models, market intelligence, and industry news.">
+  <meta name="keywords"
+    content="AI, AGI, artificial intelligence, OpenAI, Anthropic, DeepMind, GPT, Claude, Gemini, AlphaFold">
   <meta name="author" content="AIRace">
-  
+
   <!-- Open Graph -->
   <meta property="og:title" content="AIRace - AI Companies Progress Tracker">
-  <meta property="og:description" content="Track leading AI companies in the race towards AGI. Compare capabilities, market valuations, and breakthrough technologies.">
+  <meta property="og:description"
+    content="Track leading AI companies in the race towards AGI. Compare capabilities, market valuations, and breakthrough technologies.">
   <meta property="og:type" content="website">
-  
+
   <title>AIRace - AI Companies Progress Tracker</title>
-  
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
-  
+
   <style>
     /* Modal Styles */
     .modal-overlay {
@@ -37,7 +43,7 @@
       z-index: 1000;
       padding: var(--space-lg);
     }
-    
+
     .modal-content {
       width: 100%;
       max-width: 600px;
@@ -46,7 +52,7 @@
       padding: var(--space-xl);
       position: relative;
     }
-    
+
     .modal-close {
       position: absolute;
       top: var(--space-md);
@@ -62,23 +68,23 @@
       line-height: 1;
       transition: all var(--transition-fast);
     }
-    
+
     .modal-close:hover {
       background: var(--accent-danger);
       color: white;
     }
-    
+
     .modal-header {
       display: flex;
       align-items: center;
       gap: var(--space-lg);
       margin-bottom: var(--space-xl);
     }
-    
+
     .modal-section {
       margin-bottom: var(--space-xl);
     }
-    
+
     .modal-section h4 {
       font-size: 0.75rem;
       text-transform: uppercase;
@@ -86,40 +92,40 @@
       color: var(--text-muted);
       margin-bottom: var(--space-md);
     }
-    
+
     .detail-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: var(--space-md);
     }
-    
+
     .detail-item {
       display: flex;
       flex-direction: column;
       gap: var(--space-xs);
     }
-    
+
     .detail-label {
       font-size: 0.75rem;
       color: var(--text-muted);
     }
-    
+
     .detail-value {
       font-weight: 600;
     }
-    
+
     .products-list,
     .investors-list {
       display: flex;
       flex-wrap: wrap;
       gap: var(--space-sm);
     }
-    
+
     #capability-radar {
       display: block;
       margin: 0 auto;
     }
-    
+
     /* Filter Buttons */
     #model-filters {
       display: flex;
@@ -128,12 +134,12 @@
       justify-content: center;
       margin-bottom: var(--space-xl);
     }
-    
+
     #model-filters .btn.active {
       background: var(--gradient-primary);
       border-color: transparent;
     }
-    
+
     /* Comparison Section */
     .comparison-controls {
       display: flex;
@@ -143,7 +149,7 @@
       margin-bottom: var(--space-xl);
       flex-wrap: wrap;
     }
-    
+
     .comparison-controls select {
       padding: var(--space-sm) var(--space-md);
       background: var(--bg-tertiary);
@@ -154,36 +160,36 @@
       min-width: 200px;
       cursor: pointer;
     }
-    
+
     .comparison-controls select:focus {
       outline: none;
       border-color: var(--accent-primary);
     }
-    
+
     .vs-badge {
       font-size: 1.5rem;
       font-weight: 800;
       color: var(--accent-secondary);
     }
-    
+
     #comparison-chart {
       display: block;
       margin: 0 auto;
       max-width: 100%;
     }
-    
+
     /* Predictions Section */
     .predictions-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: var(--space-lg);
     }
-    
+
     .prediction-card {
       padding: var(--space-xl);
       text-align: center;
     }
-    
+
     .prediction-year {
       font-size: 3rem;
       font-weight: 800;
@@ -193,25 +199,26 @@
       -webkit-text-fill-color: transparent;
       margin-bottom: var(--space-sm);
     }
-    
+
     .prediction-label {
       color: var(--text-muted);
       font-size: 0.875rem;
       margin-bottom: var(--space-md);
     }
-    
+
     .prediction-source {
       font-size: 0.75rem;
       color: var(--text-secondary);
     }
   </style>
 </head>
+
 <body>
   <!-- Particle Background -->
   <div id="particles" class="particles-bg"></div>
   <div class="morph-bg" style="top: -200px; left: -200px;"></div>
   <div class="morph-bg" style="bottom: -200px; right: -200px; animation-delay: -7s;"></div>
-  
+
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav-container">
@@ -219,7 +226,7 @@
         <div class="nav-logo-icon">🏁</div>
         <span>AI<span class="gradient-text">Race</span></span>
       </a>
-      
+
       <ul class="nav-links">
         <li><a href="#companies" class="nav-link active">Companies</a></li>
         <li><a href="#models" class="nav-link">AI Models</a></li>
@@ -228,45 +235,46 @@
         <li><a href="#timeline" class="nav-link">Timeline</a></li>
         <li><a href="#predictions" class="nav-link">Predictions</a></li>
       </ul>
-      
+
       <div class="nav-actions">
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">☀️</button>
       </div>
     </div>
   </nav>
-  
+
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <div class="container">
       <div class="hero-content">
         <div class="hero-badge">
           <span class="pulse"></span>
-          <span>Live Tracking • Updated Dec 2024</span>
+          <span>Live Tracking • Updated Dec 2025</span>
         </div>
-        
+
         <h1 class="hero-title">
           The Race to <span class="gradient-flow">AGI</span>
         </h1>
-        
+
         <p class="hero-subtitle">
-          Track leading AI companies, their progress toward artificial general intelligence, breakthrough models, and market dynamics in real-time.
+          Track leading AI companies, their progress toward artificial general intelligence, breakthrough models, and
+          market dynamics in real-time.
         </p>
-        
+
         <div class="flex-center" style="gap: var(--space-md);">
           <a href="#companies" class="btn btn-primary">Explore Companies</a>
           <a href="#models" class="btn btn-secondary">View AI Models</a>
         </div>
-        
+
         <div id="hero-stats" class="hero-stats stagger-children"></div>
       </div>
     </div>
   </section>
-  
+
   <!-- Stock Ticker -->
   <section class="ticker-section">
     <div id="stock-ticker" class="ticker-wrapper"></div>
   </section>
-  
+
   <!-- Companies Section -->
   <section class="section" id="companies">
     <div class="container">
@@ -277,11 +285,11 @@
           Comprehensive profiles of companies driving the AI revolution, ranked by their estimated progress toward AGI.
         </p>
       </div>
-      
+
       <div id="company-grid" class="company-grid"></div>
     </div>
   </section>
-  
+
   <!-- AI Models Section -->
   <section class="section" id="models" style="background: var(--bg-secondary);">
     <div class="container">
@@ -289,15 +297,16 @@
         <span class="section-tag">Breakthrough Technology</span>
         <h2 class="section-title">AI Models & Tools</h2>
         <p class="section-description">
-          From AlphaFold revolutionizing biology to GPT-4 transforming how we work — explore the models shaping our future.
+          From AlphaFold 4 revolutionizing biology to GPT-5 transforming how we work — explore the models shaping our
+          future.
         </p>
       </div>
-      
+
       <div id="model-filters"></div>
       <div id="models-grid" class="models-grid"></div>
     </div>
   </section>
-  
+
   <!-- Comparison Section -->
   <section class="section" id="comparison">
     <div class="container">
@@ -308,19 +317,19 @@
           Compare AI capabilities across leading companies to understand their strengths and focus areas.
         </p>
       </div>
-      
+
       <div class="comparison-controls">
         <select id="compare-company-1"></select>
         <span class="vs-badge">VS</span>
         <select id="compare-company-2"></select>
       </div>
-      
+
       <div class="glass-card" style="padding: var(--space-xl);">
         <canvas id="comparison-chart" width="600" height="350"></canvas>
       </div>
     </div>
   </section>
-  
+
   <!-- News Section -->
   <section class="section" id="news" style="background: var(--bg-secondary);">
     <div class="container">
@@ -331,11 +340,11 @@
           Stay informed with the latest breakthroughs, funding rounds, and announcements from the AI world.
         </p>
       </div>
-      
+
       <div id="news-grid" class="news-grid"></div>
     </div>
   </section>
-  
+
   <!-- Timeline Section -->
   <section class="section" id="timeline">
     <div class="container">
@@ -346,11 +355,11 @@
           A chronological view of major AI milestones and model releases.
         </p>
       </div>
-      
+
       <div id="timeline" class="timeline" style="max-width: 700px; margin: 0 auto;"></div>
     </div>
   </section>
-  
+
   <!-- Predictions Section -->
   <section class="section" id="predictions" style="background: var(--bg-secondary);">
     <div class="container">
@@ -361,35 +370,35 @@
           Expert predictions on when we might achieve artificial general intelligence.
         </p>
       </div>
-      
+
       <div class="predictions-grid">
         <div class="prediction-card glass-card fade-in">
-          <div class="prediction-year">2027</div>
+          <div class="prediction-year">2026</div>
           <div class="prediction-label">OpenAI Internal Estimate</div>
-          <p class="prediction-source">"We believe we know how to build AGI" - Sam Altman, 2024</p>
+          <p class="prediction-source">"We believe we know how to build AGI" - Sam Altman, 2025</p>
         </div>
-        
+
         <div class="prediction-card glass-card fade-in" style="animation-delay: 0.1s;">
-          <div class="prediction-year">2029</div>
+          <div class="prediction-year">2028</div>
           <div class="prediction-label">Ray Kurzweil Prediction</div>
-          <p class="prediction-source">Based on exponential progress in computing and AI</p>
+          <p class="prediction-source">Accelerated by generative AI progress</p>
         </div>
-        
+
         <div class="prediction-card glass-card fade-in" style="animation-delay: 0.2s;">
-          <div class="prediction-year">2030</div>
+          <div class="prediction-year">2029</div>
           <div class="prediction-label">DeepMind Estimate</div>
-          <p class="prediction-source">Demis Hassabis: "Within the next decade"</p>
+          <p class="prediction-source">Demis Hassabis: "Well within reach"</p>
         </div>
-        
+
         <div class="prediction-card glass-card fade-in" style="animation-delay: 0.3s;">
-          <div class="prediction-year">2035+</div>
+          <div class="prediction-year">2032</div>
           <div class="prediction-label">Conservative Estimate</div>
-          <p class="prediction-source">Many researchers suggest more time needed</p>
+          <p class="prediction-source">Safety verification will take more time</p>
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -403,7 +412,7 @@
             Tracking the world's leading AI companies in their race toward artificial general intelligence.
           </p>
         </div>
-        
+
         <div>
           <h4 class="footer-heading">Sections</h4>
           <ul class="footer-links">
@@ -413,7 +422,7 @@
             <li><a href="#news">News</a></li>
           </ul>
         </div>
-        
+
         <div>
           <h4 class="footer-heading">Companies</h4>
           <ul class="footer-links">
@@ -423,20 +432,20 @@
             <li><a href="#">Meta AI</a></li>
           </ul>
         </div>
-        
+
         <div>
           <h4 class="footer-heading">Models</h4>
           <ul class="footer-links">
-            <li><a href="#">GPT-4o</a></li>
-            <li><a href="#">Claude 3.5</a></li>
-            <li><a href="#">Gemini 2.0</a></li>
-            <li><a href="#">AlphaFold</a></li>
+            <li><a href="#">GPT-5</a></li>
+            <li><a href="#">Claude 4</a></li>
+            <li><a href="#">Gemini 3.0</a></li>
+            <li><a href="#">AlphaFold 4</a></li>
           </ul>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
-        <p>&copy; 2024 AIRace. All data is illustrative and for demonstration purposes.</p>
+        <p>&copy; 2025 AIRace. All data is illustrative and for demonstration purposes.</p>
         <div class="footer-social">
           <a href="#" aria-label="GitHub">📦</a>
           <a href="#" aria-label="Twitter">🐦</a>
@@ -445,7 +454,7 @@
       </div>
     </div>
   </footer>
-  
+
   <!-- Scripts -->
   <script src="js/utils.js"></script>
   <script src="js/charts.js"></script>
@@ -459,4 +468,5 @@
     });
   </script>
 </body>
+
 </html>
